@@ -13,3 +13,4 @@ C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\Sim
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\refint\SimpleTask.BAL.dll
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.pdb
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\ref\SimpleTask.BAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.sourcelink.json

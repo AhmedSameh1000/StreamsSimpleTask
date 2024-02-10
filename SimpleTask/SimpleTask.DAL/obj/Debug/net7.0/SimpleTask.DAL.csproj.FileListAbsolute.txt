@@ -12,3 +12,4 @@ C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\ref
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\bin\Debug\net7.0\SimpleTask.DAL.runtimeconfig.json
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.csproj.AssemblyReference.cache
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.genruntimeconfig.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.sourcelink.json

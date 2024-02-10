@@ -4,6 +4,9 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public string applicationUserId { get; set; }
+        public ApplicationUser applicationUser { get; set; }
         public DateTime Created_Date { get; set; }
 
         public DateTime Due_Date { get; set; }

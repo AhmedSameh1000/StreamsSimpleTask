@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\da2bf821-4379-43c0-b946-3563f148f032.pdf",
+      "PackagePath": "staticwebassets\\Documents\\da2bf821-4379-43c0-b946-3563f148f032.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.SimpleTask.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.SimpleTask.Api.props",
+      "PackagePath": "build\\SimpleTask.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.SimpleTask.Api.props",
+      "PackagePath": "buildMultiTargeting\\SimpleTask.Api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.SimpleTask.Api.props",
+      "PackagePath": "buildTransitive\\SimpleTask.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
