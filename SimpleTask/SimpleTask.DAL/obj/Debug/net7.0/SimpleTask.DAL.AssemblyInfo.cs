@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleTask.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d62f093ebfb287dcbe4507cd8f21150c7696d1d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c702b3c5e627de253324cd02daddc1c599a41b1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleTask.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleTask.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

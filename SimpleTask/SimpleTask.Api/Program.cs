@@ -72,6 +72,7 @@ builder.Services.AddScoped<IFileServices, FileServices>();
 builder.Services.AddScoped<IDocumentFileService, DocumentFileService>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<IAuthServices, AuthServices>();
+builder.Services.AddScoped<IPriorityServices, PriorityServices>();
 var app = builder.Build();
 app.UseStaticFiles();
 using (var Scope = app.Services.CreateScope())

@@ -1,6 +1,8 @@
+import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from './../../Services/Auth/auth.service';
 import { DocumentService } from './../../Services/Document/document.service';
 import { Component, OnInit } from '@angular/core';
+import { CreateDocumentComponent } from '../create-document/create-document.component';
 
 export interface PeriodicElement {
   name: string;
@@ -17,7 +19,8 @@ export interface PeriodicElement {
 export class DocumentListComponent implements OnInit {
   constructor(
     private DocumentService: DocumentService,
-    private AuthService: AuthService
+    private AuthService: AuthService,
+    private MatDilog: MatDialog
   ) {}
   ngOnInit(): void {
     this.LoadDocuments();
@@ -46,4 +49,16 @@ export class DocumentListComponent implements OnInit {
     'dueDate',
     'actions',
   ];
+  OpenModel() {
+    let dialogRef = this.MatDilog.open(CreateDocumentComponent, {
+      minWidth: '50%',
+    });
+    dialogRef.afterClosed().subscribe({
+      next: (res: any) => {
+        if (res) {
+          this.LoadDocuments();
+        }
+      },
+    });
+  }
 }

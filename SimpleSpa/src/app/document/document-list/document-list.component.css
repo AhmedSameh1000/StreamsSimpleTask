@@ -2,8 +2,12 @@ table {
   width: 100%;
 }
 @media (max-width: 777px) {
-  td {
-    padding: 3px;
+  td,
+  th {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
   }
   .hide {
     display: none !important;

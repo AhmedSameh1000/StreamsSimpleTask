@@ -12,4 +12,16 @@ export class DocumentService {
       `https://localhost:7175/api/Document/GetUserDocuments?UserId=${UserId}`
     );
   }
+  CreateDocument(Document: any) {
+    return this.HttpClient.post(
+      'https://localhost:7175/api/Document/CreateDocument',
+      Document
+    );
+  }
+  UpdateDocument(Document: any, DocumentId: string) {
+    return this.HttpClient.put(
+      `https://localhost:7175/api/Document/UpdateDocument?documentId=${DocumentId}`,
+      Document
+    );
+  }
 }

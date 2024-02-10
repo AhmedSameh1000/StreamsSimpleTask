@@ -1,0 +1,45 @@
+<form class="p-3" [formGroup]="DocumentForm">
+  <div class="d-flex gap-2 justify-content-between">
+    <mat-form-field style="width: 49%">
+      <mat-label>Document name</mat-label>
+      <input matInput formControlName="Name" />
+    </mat-form-field>
+
+    <mat-form-field style="width: 49%">
+      <mat-label>Document priority</mat-label>
+      <mat-select formControlName="priorityId">
+        <mat-option *ngFor="let priority of Priorties" [value]="priority.id">{{
+          priority.name
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    d>
+  </div>
+
+  <mat-form-field class="w-100">
+    <mat-label>Choose a due date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="Due_date" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <input
+    type="file"
+    (change)="SelectFiles($event)"
+    class="form-control mt-2 rounded-0"
+    multiple
+  />
+
+  <div class="mt-3 d-flex justify-content-between">
+    <button
+      mat-raised-button
+      color="accent"
+      type="button"
+      (click)="SaveDocument()"
+    >
+      Save Document
+    </button>
+    <button mat-dialog-close mat-raised-button color="primary">Cancel</button>
+  </div>
+</form>

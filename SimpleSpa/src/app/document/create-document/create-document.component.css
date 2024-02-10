@@ -1,0 +1,7 @@
+.effect {
+  position: relative;
+}
+.effect:hover {
+  background-color: rgb(192, 225, 226);
+  border-radius: 50%;
+}

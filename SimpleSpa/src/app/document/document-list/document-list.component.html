@@ -1,6 +1,23 @@
 <div class="container">
-  <h1 class="btn btn-primary rounded-0 mt-2">Create Document</h1>
-  <mat-card class="p-2">
+  <h1 class="btn btn-primary rounded-0 mt-2" (click)="OpenModel()">
+    Create Document
+  </h1>
+
+  <div
+    *ngIf="Documents?.length == 0"
+    class="alert alert-warning alert-dismissible fade show"
+    role="alert"
+  >
+    <strong class="me-2">Warning</strong> lets create documents
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+
+  <mat-card class="p-2" *ngIf="Documents?.length != 0">
     <table mat-table [dataSource]="Documents" class="mat-elevation-z8">
       <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
