@@ -1,0 +1,40 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="text-light ms-3 h4 pointer h-100" routerLink="list">
+    Documents
+  </div>
+  <div class="d-flex gap-3 me-3 h-100">
+    <div class="d-flex align-items-center gap-3 h-100">
+      <div class="text-light pointer h4 mt-1" *ngIf="AuthService.isLoggedIn()">
+        Hello {{ AuthService.GetName() }}
+      </div>
+      <div>
+        <button
+          class="pointer"
+          mat
+          routerLink="login"
+          *ngIf="AuthService.isLoggedIn()"
+          mat-raised-button
+          color="primary"
+          (click)="AuthService.logout()"
+        >
+          Log Out
+        </button>
+      </div>
+    </div>
+    <div
+      class="text-light pointer h4 h-100"
+      routerLink="login"
+      *ngIf="!AuthService.isLoggedIn()"
+    >
+      LogIn
+    </div>
+    <div
+      class="text-light pointer h4 h-100"
+      routerLink="signup"
+      accordion
+      *ngIf="!AuthService.isLoggedIn()"
+    >
+      Register
+    </div>
+  </div>
+</nav>

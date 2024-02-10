@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleTask.BAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d62f093ebfb287dcbe4507cd8f21150c7696d1d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d7d6d795e7d2f0fd164b1a21470309f43f4dc69")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleTask.BAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleTask.BAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Win32;
+﻿using Microsoft.AspNetCore.Mvc;
 using SimpleTask.BAL.DTOs;
 using SimpleTask.BAL.Services.Interfaces;
 
@@ -22,6 +20,10 @@ namespace SimpleTask.Api.Controllers
         {
             var Result = await _AuthServices.LoginAsync(logInDTo);
 
+            if (!Result.IsAuthenticated)
+            {
+                return BadRequest(Result);
+            }
             return Ok(Result);
         }
 
@@ -30,6 +32,10 @@ namespace SimpleTask.Api.Controllers
         {
             var Result = await _AuthServices.RegisterAsync(registerDto);
 
+            if (!Result.IsAuthenticated)
+            {
+                return BadRequest(Result);
+            }
             return Ok(Result);
         }
     }
