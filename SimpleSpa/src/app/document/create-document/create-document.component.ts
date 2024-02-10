@@ -1,9 +1,9 @@
 import { PriortyService } from './../../Services/Priorty/priorty.service';
 import { DocumentService } from './../../Services/Document/document.service';
 import { AuthService } from './../../Services/Auth/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { formatDate } from '@angular/common';
 
 @Component({
@@ -16,11 +16,13 @@ export class CreateDocumentComponent implements OnInit {
     private AuthService: AuthService,
     private DocumentService: DocumentService,
     private PriortyService: PriortyService,
-    private MatDialogref: MatDialogRef<CreateDocumentComponent>
+    private MatDialogref: MatDialogRef<CreateDocumentComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { id: any }
   ) {}
   ngOnInit(): void {
     this.LoadPriorties();
     this.InitializeForm();
+    console.log(this.data);
   }
   DocumentForm: FormGroup;
 

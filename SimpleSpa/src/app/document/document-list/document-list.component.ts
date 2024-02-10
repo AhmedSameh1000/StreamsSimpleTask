@@ -1,8 +1,9 @@
 import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from './../../Services/Auth/auth.service';
 import { DocumentService } from './../../Services/Document/document.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, createComponent } from '@angular/core';
 import { CreateDocumentComponent } from '../create-document/create-document.component';
+import Swal from 'sweetalert2';
 
 export interface PeriodicElement {
   name: string;
@@ -59,6 +60,40 @@ export class DocumentListComponent implements OnInit {
           this.LoadDocuments();
         }
       },
+    });
+  }
+  DeleteDocuemnt(id) {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.DocumentService.DeleteDocument(
+          id,
+          this.AuthService.GetUserId()
+        ).subscribe({
+          next: (res) => {
+            Swal.fire({
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
+            });
+            this.LoadDocuments();
+          },
+        });
+      }
+    });
+  }
+
+  OpenModelToUpdate(id: any) {
+    let dialogRef = this.MatDilog.open(CreateDocumentComponent, {
+      minWidth: '50%',
+      data: id,
     });
   }
 }

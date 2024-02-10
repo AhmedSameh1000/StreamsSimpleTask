@@ -24,4 +24,9 @@ export class DocumentService {
       Document
     );
   }
+  DeleteDocument(documentId: any, UserId: string) {
+    return this.HttpClient.delete(
+      `https://localhost:7175/api/Document/DeleteDocument?documentId=${documentId}&UserId=${UserId}`
+    );
+  }
 }

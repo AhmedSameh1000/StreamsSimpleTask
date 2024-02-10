@@ -62,13 +62,21 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
         <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="warn">
+          <button
+            mat-icon-button
+            color="warn"
+            (click)="DeleteDocuemnt(element.id)"
+          >
             <mat-icon>delete</mat-icon>
           </button>
           <button mat-icon-button color="primary">
             <mat-icon>visibility</mat-icon>
           </button>
-          <button mat-icon-button color="accent">
+          <button
+            mat-icon-button
+            color="accent"
+            (click)="OpenModelToUpdate(element.id)"
+          >
             <mat-icon>edit</mat-icon>
           </button>
         </td>
