@@ -120,5 +120,26 @@ namespace SimpleTask.BAL.Services.Implementation
 
             return DocumentsFile;
         }
+
+        public async Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId)
+        {
+            var Documents = await _DocumentRepository.GetAllAsNoTracking(c => c.applicationUserId == UserId, new[] { "applicationUser", "priority", "documents" });
+
+            if (Documents is null)
+                return null;
+
+            return Documents.Select(d => new DocumentForReturnDTO()
+            {
+                Id = d.Id,
+                UserId = UserId,
+                Name = d.Name,
+                CreatedDate = d.Created_Date,
+                DueDate = d.Due_Date,
+                Priorty = d.priority.Name,
+                UserEmail = d.applicationUser.Email,
+                UserName = d.applicationUser.Name,
+                DocumentFiles = d.documents.Select(c => Path.Combine(_Host.WebRootPath, "Documents", c.File_Path)).ToList()
+            }).ToList();
+        }
     }
 }

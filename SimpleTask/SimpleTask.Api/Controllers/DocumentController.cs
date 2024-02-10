@@ -51,5 +51,14 @@ namespace SimpleTask.Api.Controllers
             }
             return Ok(Result);
         }
+
+        [HttpGet("GetUserDocuments")]
+        public async Task<IActionResult> GetUserDocuments(string UserId)
+        {
+            var Docuemnts = await _DocumentService.GetUserDocuments(UserId);
+            if (Docuemnts == null)
+                return BadRequest();
+            return Ok(Docuemnts);
+        }
     }
 }

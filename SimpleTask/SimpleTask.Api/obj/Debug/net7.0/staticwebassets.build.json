@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ggBOdzbxdtCGuBqT2mzMBySw96dEdo3v3HTLpb9m1vU=",
+  "Hash": "byIrPYrcmVqU+J8FpUfiZVnhJiNM60gW2V3Em/A8TdQ=",
   "Source": "SimpleTask.Api",
   "BasePath": "_content/SimpleTask.Api",
   "Mode": "Default",
@@ -16,6 +16,44 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\5621dc22-575d-4824-a9fe-fadfb800efc2.png",
+      "SourceId": "SimpleTask.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
+      "BasePath": "_content/SimpleTask.Api",
+      "RelativePath": "Documents/5621dc22-575d-4824-a9fe-fadfb800efc2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\5621dc22-575d-4824-a9fe-fadfb800efc2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\63938f22-5c39-46ef-af45-ff4cdce7039e.pdf",
+      "SourceId": "SimpleTask.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
+      "BasePath": "_content/SimpleTask.Api",
+      "RelativePath": "Documents/63938f22-5c39-46ef-af45-ff4cdce7039e.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\63938f22-5c39-46ef-af45-ff4cdce7039e.pdf"
+    },
     {
       "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\da2bf821-4379-43c0-b946-3563f148f032.pdf",
       "SourceId": "SimpleTask.Api",
