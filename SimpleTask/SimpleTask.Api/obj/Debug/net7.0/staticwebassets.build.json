@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "+xIXOEDqSuT3G595qGbgeb7WNoI8UAqJs7GN2E0VRe0=",
+  "Source": "SimpleTask.Api",
+  "BasePath": "_content/SimpleTask.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,14 @@
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\bin\Debug\net7.0\SimpleTask.DAL.deps.json
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\bin\Debug\net7.0\SimpleTask.DAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\bin\Debug\net7.0\SimpleTask.DAL.pdb
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.AssemblyInfoInputs.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.AssemblyInfo.cs
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\refint\SimpleTask.DAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.pdb
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\ref\SimpleTask.DAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\bin\Debug\net7.0\SimpleTask.DAL.runtimeconfig.json
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.csproj.AssemblyReference.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.DAL\obj\Debug\net7.0\SimpleTask.DAL.genruntimeconfig.cache

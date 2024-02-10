@@ -1,0 +1,15 @@
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\bin\Debug\net7.0\SimpleTask.BAL.deps.json
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\bin\Debug\net7.0\SimpleTask.BAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\bin\Debug\net7.0\SimpleTask.BAL.pdb
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\bin\Debug\net7.0\SimpleTask.DAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\bin\Debug\net7.0\SimpleTask.DAL.pdb
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.csproj.AssemblyReference.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.AssemblyInfoInputs.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.AssemblyInfo.cs
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.csproj.CopyComplete
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\refint\SimpleTask.BAL.dll
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\SimpleTask.BAL.pdb
+C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.BAL\obj\Debug\net7.0\ref\SimpleTask.BAL.dll
