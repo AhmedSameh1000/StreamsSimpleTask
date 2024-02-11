@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\005dfca7-375d-48be-9424-ebb5cae232bd.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>SimpleTask.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SimpleTask.Api</BasePath>
-      <RelativePath>Documents/44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf</RelativePath>
+      <RelativePath>Documents/005dfca7-375d-48be-9424-ebb5cae232bd.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\005dfca7-375d-48be-9424-ebb5cae232bd.pdf))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>SimpleTask.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SimpleTask.Api</BasePath>
-      <RelativePath>Documents/455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf</RelativePath>
+      <RelativePath>Documents/329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,14 +30,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\5a254ceb-5559-494e-837d-ac5e03a4492d.png))">
       <SourceType>Package</SourceType>
       <SourceId>SimpleTask.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SimpleTask.Api</BasePath>
-      <RelativePath>Documents/c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf</RelativePath>
+      <RelativePath>Documents/5a254ceb-5559-494e-837d-ac5e03a4492d.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,14 +46,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\5a254ceb-5559-494e-837d-ac5e03a4492d.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\8bb41034-c266-49ef-9f74-e460a89bc287.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>SimpleTask.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SimpleTask.Api</BasePath>
-      <RelativePath>Documents/ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png</RelativePath>
+      <RelativePath>Documents/8bb41034-c266-49ef-9f74-e460a89bc287.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -62,14 +62,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\8bb41034-c266-49ef-9f74-e460a89bc287.pdf))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\d98f4c34-d428-4900-a945-1fc92c12a535.pdf))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\9c78ce03-0e7c-47b5-9577-b8028b9d637c.png))">
       <SourceType>Package</SourceType>
       <SourceId>SimpleTask.Api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SimpleTask.Api</BasePath>
-      <RelativePath>Documents/d98f4c34-d428-4900-a945-1fc92c12a535.pdf</RelativePath>
+      <RelativePath>Documents/9c78ce03-0e7c-47b5-9577-b8028b9d637c.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -78,7 +78,55 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\d98f4c34-d428-4900-a945-1fc92c12a535.pdf))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\9c78ce03-0e7c-47b5-9577-b8028b9d637c.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>SimpleTask.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SimpleTask.Api</BasePath>
+      <RelativePath>Documents/bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>SimpleTask.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SimpleTask.Api</BasePath>
+      <RelativePath>Documents/d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>SimpleTask.Api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SimpleTask.Api</BasePath>
+      <RelativePath>Documents/dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Documents\dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

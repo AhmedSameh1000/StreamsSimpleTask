@@ -23,7 +23,12 @@ namespace SimpleTask.BAL.Services.Implementation
 
         public async Task<bool> CreateDocumentAsync(DocumentForCreateDTo documentModel)
         {
-            var DocumentsFile = SaveModelFiles(documentModel);
+            if (documentModel is null)
+            {
+                return false;
+            }
+
+            var DocumentsFile = _FileServices.SaveModelFiles(documentModel);
 
             var Document = new Document()
             {
@@ -61,7 +66,7 @@ namespace SimpleTask.BAL.Services.Implementation
                 }
 
                 //save new files
-                var DocumentsFile = SaveModelFiles(documentModel);
+                var DocumentsFile = _FileServices.SaveModelFiles(documentModel);
                 Document.documents = DocumentsFile;
             }
 
@@ -99,27 +104,6 @@ namespace SimpleTask.BAL.Services.Implementation
             }
 
             return Result;
-        }
-
-        public List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel)
-        {
-            var DocumentPath = Path.Combine(_Host.WebRootPath, "Documents");
-            var DocumentsFile = new List<DocumentFile>();
-            documentModel.files.ForEach(f =>
-            {
-                if (!Path.Exists(DocumentPath))
-                {
-                    Directory.CreateDirectory(DocumentPath);
-                }
-                var Url = _FileServices.SaveFile(f, DocumentPath);
-                DocumentsFile.Add(new DocumentFile()
-                {
-                    File_Path = Url.Path,
-                    FileName = Url.Name
-                });
-            });
-
-            return DocumentsFile;
         }
 
         public async Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId)

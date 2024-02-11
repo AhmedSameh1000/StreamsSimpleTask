@@ -43,5 +43,26 @@ namespace SimpleTask.BAL.Services.Implementation
                 Name = file.FileName
             };
         }
+
+        public List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel)
+        {
+            var DocumentPath = Path.Combine(_Host.WebRootPath, "Documents");
+            var DocumentsFile = new List<DocumentFile>();
+            documentModel.files.ForEach(f =>
+            {
+                if (!Path.Exists(DocumentPath))
+                {
+                    Directory.CreateDirectory(DocumentPath);
+                }
+                var Url = SaveFile(f, DocumentPath);
+                DocumentsFile.Add(new DocumentFile()
+                {
+                    File_Path = Url.Path,
+                    FileName = Url.Name
+                });
+            });
+
+            return DocumentsFile;
+        }
     }
 }

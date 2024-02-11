@@ -13,8 +13,6 @@ namespace SimpleTask.BAL.Services.Interfaces
 
         Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId);
 
-        List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel);
-
         Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId);
     }
 }

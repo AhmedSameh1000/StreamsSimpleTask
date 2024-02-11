@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4rlyZ75N6oKMgphQ/Hm0lLpcUTFDbP5f60V/N+Ci95w=",
+  "Hash": "Mg9GJI30Faqj/eP0dvPudg0i0a6C1j08bb6tF+sqbYQ=",
   "Source": "SimpleTask.Api",
   "BasePath": "_content/SimpleTask.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\005dfca7-375d-48be-9424-ebb5cae232bd.pdf",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf",
+      "RelativePath": "Documents/005dfca7-375d-48be-9424-ebb5cae232bd.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\44d78db6-ff94-4a3f-bd71-d7f3208a4e46.pdf"
+      "OriginalItemSpec": "wwwroot\\Documents\\005dfca7-375d-48be-9424-ebb5cae232bd.pdf"
     },
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf",
+      "RelativePath": "Documents/329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\455250ea-ee68-4fbd-9db5-68b607bf17d7.pdf"
+      "OriginalItemSpec": "wwwroot\\Documents\\329067e7-0f7c-4762-a27b-892daa8a8ab8.pdf"
     },
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\5a254ceb-5559-494e-837d-ac5e03a4492d.png",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf",
+      "RelativePath": "Documents/5a254ceb-5559-494e-837d-ac5e03a4492d.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\c2a25d46-34c9-4f6f-a895-2b3c2e2a81c2.pdf"
+      "OriginalItemSpec": "wwwroot\\Documents\\5a254ceb-5559-494e-837d-ac5e03a4492d.png"
     },
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\8bb41034-c266-49ef-9f74-e460a89bc287.pdf",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png",
+      "RelativePath": "Documents/8bb41034-c266-49ef-9f74-e460a89bc287.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\ce676c2c-d08f-4734-9e1b-cbb6616d6c0b.png"
+      "OriginalItemSpec": "wwwroot\\Documents\\8bb41034-c266-49ef-9f74-e460a89bc287.pdf"
     },
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\d98f4c34-d428-4900-a945-1fc92c12a535.pdf",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\9c78ce03-0e7c-47b5-9577-b8028b9d637c.png",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/d98f4c34-d428-4900-a945-1fc92c12a535.pdf",
+      "RelativePath": "Documents/9c78ce03-0e7c-47b5-9577-b8028b9d637c.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,64 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\d98f4c34-d428-4900-a945-1fc92c12a535.pdf"
+      "OriginalItemSpec": "wwwroot\\Documents\\9c78ce03-0e7c-47b5-9577-b8028b9d637c.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png",
+      "SourceId": "SimpleTask.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
+      "BasePath": "_content/SimpleTask.Api",
+      "RelativePath": "Documents/bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\bbf3b8ae-cedb-4d5c-9206-bc4b35668420.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf",
+      "SourceId": "SimpleTask.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
+      "BasePath": "_content/SimpleTask.Api",
+      "RelativePath": "Documents/d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\d6a3503d-ec7d-4b17-9524-b8c89d43dbce.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png",
+      "SourceId": "SimpleTask.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
+      "BasePath": "_content/SimpleTask.Api",
+      "RelativePath": "Documents/dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\dffdb6d9-f52b-4dd8-b158-090eb7fbf9cf.png"
     }
   ]
 }

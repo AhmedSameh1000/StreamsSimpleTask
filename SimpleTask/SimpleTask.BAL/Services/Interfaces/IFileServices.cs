@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using SimpleTask.BAL.DTOs;
+using SimpleTask.DAL.Domains;
 
 namespace SimpleTask.BAL.Services.Interfaces
 {
@@ -8,5 +9,7 @@ namespace SimpleTask.BAL.Services.Interfaces
         void DeleteFile(string Folderpath, string fileNamewithExtension);
 
         FileInformation SaveFile(IFormFile file, string FolderPath);
+
+        List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel);
     }
 }
