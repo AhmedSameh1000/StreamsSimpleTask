@@ -2,9 +2,11 @@ import { PriortyService } from './../../Services/Priorty/priorty.service';
 import { DocumentService } from './../../Services/Document/document.service';
 import { AuthService } from './../../Services/Auth/auth.service';
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { formatDate } from '@angular/common';
+import { AllowedExtensionsValidator } from '../../Validators/AllowedExtensions.validator';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create-document',
@@ -31,21 +33,29 @@ export class CreateDocumentComponent implements OnInit {
 
   InitializeForm() {
     this.DocumentForm = new FormGroup({
-      Name: new FormControl(),
+      Name: new FormControl('', [Validators.required]),
       UserId: new FormControl(this.AuthService.GetUserId()),
-      Due_date: new FormControl(),
-      priorityId: new FormControl(),
+      Due_date: new FormControl([Validators.required]),
+      priorityId: new FormControl([Validators.required]),
       files: new FormArray([]),
     });
   }
   SaveDocument() {
+    var arr = this.DocumentForm.get('files') as FormArray;
+    if (this.DocumentForm.invalid || arr.length === 0) return;
     this.DocumentService.CreateDocument(this.GetFormData()).subscribe({
       next: (res) => {
         console.log(res);
         this.MatDialogref.close(true);
       },
       error: (err) => {
-        console.log(err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        });
+        var arr = this.DocumentForm.get('files') as FormArray;
+        arr.clear();
       },
     });
   }
@@ -104,11 +114,8 @@ export class CreateDocumentComponent implements OnInit {
 
   SelectFiles($event: any) {
     const files: FileList = $event.target.files;
-    console.log(files);
 
     const filesFormArray = this.DocumentForm.get('files') as FormArray;
-
-    filesFormArray.clear();
 
     for (let i = 0; i < files.length; i++) {
       filesFormArray.push(new FormControl(files[i]));
@@ -121,6 +128,15 @@ export class CreateDocumentComponent implements OnInit {
     ).subscribe({
       next: (res) => {
         this.MatDialogref.close(true);
+      },
+      error: (err) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        });
+        var arr = this.DocumentForm.get('files') as FormArray;
+        arr.clear();
       },
     });
   }

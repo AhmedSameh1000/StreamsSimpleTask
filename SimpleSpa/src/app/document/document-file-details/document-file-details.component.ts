@@ -1,15 +1,10 @@
-import {
-  Component,
-  Inject,
-  OnInit,
-  ɵIS_HYDRATION_DOM_REUSE_ENABLED,
-} from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DocumentFileService } from '../../Services/DocumentFile/document-file.service';
 import Swal from 'sweetalert2';
-import { tick } from '@angular/core/testing';
-import { TitleStrategy } from '@angular/router';
 import { FormArray, FormControl, Validators } from '@angular/forms';
+import { AllowedExtensionsValidator } from '../../Validators/AllowedExtensions.validator';
+
 @Component({
   selector: 'app-document-file-details',
   templateUrl: './document-file-details.component.html',
@@ -22,7 +17,6 @@ export class DocumentFileDetailsComponent implements OnInit {
     private MatDialogRef: MatDialogRef<DocumentFileDetailsComponent>
   ) {}
   ngOnInit(): void {
-    console.log(this.data);
     this.LoadDocumentsFile();
   }
   Files: any[];
@@ -30,7 +24,6 @@ export class DocumentFileDetailsComponent implements OnInit {
     this.DocumentFileService.GetFilesByDocumentId(this.data.id).subscribe({
       next: (res: any) => {
         this.Files = res;
-        console.log(res);
       },
     });
   }
@@ -72,24 +65,38 @@ export class DocumentFileDetailsComponent implements OnInit {
   }
 
   SelectFormFiles = new FormArray([]);
-  InsertNewFiles($event) {
+  SelectFiles($event) {
     const selectedfiles: any = $event.target.files;
 
     var formdata = new FormData();
-    formdata.append('DocumentId', this.data.id);
-
     for (let i = 0; i < selectedfiles.length; i++) {
-      this.SelectFormFiles.push(new FormControl(selectedfiles[i]));
+      this.SelectFormFiles.push(
+        new FormControl(selectedfiles[i], [AllowedExtensionsValidator])
+      );
       formdata.append('files', selectedfiles[i]);
     }
+
+    if (this.SelectFormFiles.invalid) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Select Valid Files',
+      });
+      this.SelectFormFiles.clear();
+      return;
+    }
+
+    formdata.append('DocumentId', this.data.id);
+
+    this.InsertFiles(formdata);
+    this.SelectFormFiles.clear();
+  }
+  InsertFiles(formdata: any) {
     this.DocumentFileService.InsertNewFiles(formdata).subscribe({
       next: (res) => {
         this.LoadDocumentsFile();
-        console.log(res);
       },
-      error: (err) => {
-        console.log(err);
-      },
+      error: (err) => {},
     });
   }
 }

@@ -34,12 +34,9 @@ export class DocumentListComponent implements OnInit {
       this.AuthService.GetUserId()
     ).subscribe({
       next: (res: any) => {
-        console.log(res);
         this.Documents = res;
       },
-      error: (err) => {
-        console.log(err);
-      },
+      error: (err) => {},
     });
   }
   displayedColumns: string[] = [
@@ -85,7 +82,7 @@ export class DocumentListComponent implements OnInit {
               text: 'Your file has been deleted.',
               icon: 'success',
               position: 'top-left',
-              width: '40%',
+              width: '50%',
               heightAuto: true,
             });
             this.LoadDocuments();
@@ -110,7 +107,6 @@ export class DocumentListComponent implements OnInit {
   }
 
   OpenModelForDisplay(id) {
-    console.log(id);
     let AfterClose = this.MatDilog.open(DocumentFileDetailsComponent, {
       minWidth: '30%',
       data: {
