@@ -11,5 +11,7 @@ namespace SimpleTask.BAL.Services.Interfaces
         Task<string> GetFilePath(int fileId);
 
         Task<bool> InsertFilesIntoDocument(FileForCreateDTO fileModel);
+
+        Task<List<DocumentFileToReturn>> GetUserFiles(string UserId);
     }
 }

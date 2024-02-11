@@ -14,5 +14,9 @@ namespace SimpleTask.BAL.Services.Interfaces
         Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId);
 
         Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId);
+        
+       
+
+        Task<List<UserWithHisDocumentsForReturnDto>> GetUsersWithDocuments();
     }
 }

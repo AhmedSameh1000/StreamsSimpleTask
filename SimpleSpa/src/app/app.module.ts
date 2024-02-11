@@ -7,8 +7,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { CoreModule } from './core/core.module';
 import { MaterialModule } from './material/material.module';
 import { AuthModule } from './auth/auth.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DocumentModule } from './document/document.module';
+import { AuthInterceptor } from './auth/Interceptors/AuthInterceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,14 @@ import { DocumentModule } from './document/document.module';
     HttpClientModule,
     DocumentModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [
+    provideAnimationsAsync(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

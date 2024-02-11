@@ -14,13 +14,15 @@ namespace SimpleTask.BAL.Services.Implementation
         private readonly IWebHostEnvironment _Host;
         private readonly IHttpContextAccessor _HttpContextAccessor;
         private readonly IDocumentRepository _DocumentRepository;
+        private readonly IUserRepository _UserRepository;
 
         public DocumentFileService(
             IDocumentFileRepository documentFileRepository,
             IFileServices fileServices,
             IWebHostEnvironment Host,
             IHttpContextAccessor httpContextAccessor,
-           IDocumentRepository documentRepository
+           IDocumentRepository documentRepository,
+           IUserRepository userRepository
            )
         {
             _DocumentFileRepository = documentFileRepository;
@@ -28,6 +30,7 @@ namespace SimpleTask.BAL.Services.Implementation
             _Host = Host;
             _HttpContextAccessor = httpContextAccessor;
             _DocumentRepository = documentRepository;
+            _UserRepository = userRepository;
         }
 
         public async Task<bool> DeleteDocumentFile(int DocumentFileId)
@@ -80,6 +83,22 @@ namespace SimpleTask.BAL.Services.Implementation
                 FileName = c.FileName
             }).ToList();
             return Result;
+        }
+
+        public async Task<List<DocumentFileToReturn>> GetUserFiles(string UserId)
+        {
+            var Documents = await _DocumentRepository.GetAllAsNoTracking(c => c.applicationUserId == UserId, new[] { "documents" });
+
+            var documentFiles = Documents.SelectMany(doc => doc.documents)
+                                     .Select(df => new DocumentFileToReturn
+                                     {
+                                         id = df.Id,
+                                         filePath = Path.Combine(@$"{_HttpContextAccessor.HttpContext.Request.Scheme}://{_HttpContextAccessor.HttpContext.Request.Host}", "Documents", df.File_Path),
+                                         FileName = df.FileName // assuming you have this property in DocumentFile
+                                     })
+                                     .ToList();
+
+            return documentFiles;
         }
 
         public async Task<bool> InsertFilesIntoDocument(FileForCreateDTO fileModel)

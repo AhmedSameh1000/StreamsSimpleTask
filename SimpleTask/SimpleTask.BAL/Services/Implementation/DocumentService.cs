@@ -11,14 +11,16 @@ namespace SimpleTask.BAL.Services.Implementation
         private readonly IDocumentRepository _DocumentRepository;
         private readonly IFileServices _FileServices;
         private readonly IWebHostEnvironment _Host;
+        private readonly IUserRepository _UserRepository;
 
         public DocumentService(IDocumentRepository documentRepository,
             IFileServices fileServices,
-            IWebHostEnvironment Host)
+            IWebHostEnvironment Host, IUserRepository userRepository)
         {
             _DocumentRepository = documentRepository;
             _FileServices = fileServices;
             _Host = Host;
+            _UserRepository = userRepository;
         }
 
         public async Task<bool> CreateDocumentAsync(DocumentForCreateDTo documentModel)
@@ -143,6 +145,20 @@ namespace SimpleTask.BAL.Services.Implementation
                 Name = Docment.Name,
                 PriortyId = Docment.PriorityId
             };
+        }
+
+        public async Task<List<UserWithHisDocumentsForReturnDto>> GetUsersWithDocuments()
+        {
+            var users = await _UserRepository.GetAllAsNoTracking(new[] { "documents" });
+
+            var Result = users.Where(c => c.documents.Count() != 0).Select(u => new UserWithHisDocumentsForReturnDto()
+            {
+                Email = u.Email,
+                UserId = u.Id,
+                UserName = u.Name
+            }).ToList();
+
+            return Result;
         }
     }
 }

@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <mat-card class="p-2" *ngIf="UserDocuments?.length != 0">
+    <table mat-table [dataSource]="UserDocuments" class="mat-elevation-z8">
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="userName">
+        <th mat-header-cell *matHeaderCellDef>userName.</th>
+        <td mat-cell *matCellDef="let element">{{ element.userName }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>email</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.email }}
+        </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="text-center">Actions</th>
+        <td mat-cell *matCellDef="let element" class="text-center">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="ShowUserDocuments(element.userId, element.email)"
+          >
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card>
+</div>

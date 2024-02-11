@@ -12,6 +12,12 @@ export class DocumentFileService {
       `https://localhost:7175/api/DocumentFile/GetFileBuDocumentid?DocumentId=${DocumentId}`
     );
   }
+
+  GetFilesByUserId(UserId: any) {
+    return this.HttpClient.get(
+      `https://localhost:7175/api/DocumentFile/GetDocumentsFileWithUserId?userId=${UserId}`
+    );
+  }
   DeleteFile(FileId: any) {
     return this.HttpClient.delete(
       `https://localhost:7175/api/DocumentFile/DeleteDocumentFile?id=${FileId}`

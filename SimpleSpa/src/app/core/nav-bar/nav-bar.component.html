@@ -1,10 +1,19 @@
 <nav class="navbar navbar-dark bg-dark">
-  <div
-    class="text-light ms-3 h4 pointer h-100"
-    routerLink="list"
-    *ngIf="AuthService.isLoggedIn()"
-  >
-    Documents
+  <div class="d-flex gap-2">
+    <div
+      class="text-light ms-3 h4 pointer h-100"
+      routerLink="list"
+      *ngIf="AuthService.isLoggedIn()"
+    >
+      Documents
+    </div>
+    <div
+      class="text-light ms-3 h4 pointer h-100"
+      routerLink="userswithdocumens"
+      *ngIf="AuthService.isLoggedIn() && AuthService.IsAdmin()"
+    >
+      User Documents
+    </div>
   </div>
   <div
     class="text-light ms-3 h4 pointer h-100"

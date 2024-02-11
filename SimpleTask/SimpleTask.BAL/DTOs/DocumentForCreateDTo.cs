@@ -11,7 +11,7 @@ namespace SimpleTask.BAL.DTOs
         public DateTime Due_date { get; set; }
         public int PriorityId { get; set; }
 
-        [AllowedExtensionsAttributes(".pdf,.jpeg,.png,.mp4")]
+        [AllowedExtensionsAttributes(".pdf,.jpeg,.png,.mp4,.txt,.doc,.xls,.ppt,.gif,.mp3,.rar,.zip")]
         public List<IFormFile>? files { get; set; }
     }
 }

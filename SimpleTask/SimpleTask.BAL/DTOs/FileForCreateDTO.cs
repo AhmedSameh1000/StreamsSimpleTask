@@ -12,7 +12,7 @@ namespace SimpleTask.BAL.DTOs
     {
         public int DocumentId { get; set; }
 
-        [AllowedExtensionsAttributes(".pdf,.jpeg,.png,.mp4")]
+        [AllowedExtensionsAttributes(".pdf,.jpeg,.png,.mp4,.txt,.doc,.xls,.ppt,.gif,.mp3,.rar")]
         public List<IFormFile> files { get; set; }
     }
 }

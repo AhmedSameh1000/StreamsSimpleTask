@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.StaticFiles;
 using SimpleTask.BAL.DTOs;
@@ -8,6 +9,7 @@ namespace SimpleTask.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DocumentFileController : ControllerBase
     {
         private readonly IDocumentFileService _DocumentFileService;
@@ -61,6 +63,15 @@ namespace SimpleTask.Api.Controllers
             var Result = await _DocumentFileService.InsertFilesIntoDocument(FileModel);
             if (!Result)
                 return BadRequest();
+
+            return Ok(Result);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet("GetDocumentsFileWithUserId")]
+        public async Task<IActionResult> GetDocumentsFileWithUserId(string userId)
+        {
+            var Result = await _DocumentFileService.GetUserFiles(userId);
 
             return Ok(Result);
         }

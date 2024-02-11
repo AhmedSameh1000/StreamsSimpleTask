@@ -1,8 +1,5 @@
-﻿using AutoFixture;
-using AutoFixture.Kernel;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Moq;
 using SimpleTask.BAL.DTOs;
 using SimpleTask.BAL.Services.Implementation;
@@ -20,17 +17,19 @@ namespace SimpleTask.UnitTest
 
         private readonly Mock<IFileServices> _fileServicesMock;
         private readonly Mock<IWebHostEnvironment> _webHostMock;
+        private readonly Mock<IUserRepository> _UserRepoMock;
 
         public DocumentServiceTest()
 
         {
             _fileServicesMock = new Mock<IFileServices>();
             _webHostMock = new Mock<IWebHostEnvironment>();
+            _UserRepoMock = new Mock<IUserRepository>();
             _DocumentRepositryMock = new Mock<IDocumentRepository>();
 
             _DocumentRepository = _DocumentRepositryMock.Object;
 
-            _DocumentService = new DocumentService(_DocumentRepository, _fileServicesMock.Object, _webHostMock.Object);
+            _DocumentService = new DocumentService(_DocumentRepository, _fileServicesMock.Object, _webHostMock.Object, _UserRepoMock.Object);
         }
 
         #region CreateDocumentAsync

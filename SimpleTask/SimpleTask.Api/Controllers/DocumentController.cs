@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimpleTask.BAL.DTOs;
 using SimpleTask.BAL.Services.Interfaces;
@@ -7,6 +8,7 @@ namespace SimpleTask.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DocumentController : ControllerBase
     {
         private readonly IDocumentService _DocumentService;
@@ -60,12 +62,24 @@ namespace SimpleTask.Api.Controllers
                 return BadRequest();
             return Ok(Docuemnts);
         }
+
         [HttpGet("GetSingleDocument")]
         public async Task<IActionResult> GetGetSingleDocument(int documentId)
         {
-            var Document=await _DocumentService.GetDocumentById(documentId);
+            var Document = await _DocumentService.GetDocumentById(documentId);
 
-            if(Document == null)
+            if (Document == null)
+                return BadRequest();
+
+            return Ok(Document);
+        }
+        [Authorize(Roles ="Admin")]
+        [HttpGet("GetUserWithHisDocuments")]
+        public async Task<IActionResult> GetUserWithHisDocuments()
+        {
+            var Document = await _DocumentService.GetUsersWithDocuments();
+
+            if (Document == null)
                 return BadRequest();
 
             return Ok(Document);

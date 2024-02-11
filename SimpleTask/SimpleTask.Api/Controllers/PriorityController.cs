@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimpleTask.BAL.Services.Interfaces;
 
@@ -6,6 +7,7 @@ namespace SimpleTask.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class PriorityController : ControllerBase
     {
         private readonly IPriorityServices _PriorityServices;

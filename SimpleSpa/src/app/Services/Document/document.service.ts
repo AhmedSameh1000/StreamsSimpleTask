@@ -17,6 +17,12 @@ export class DocumentService {
       `https://localhost:7175/api/Document/GetUserDocuments?UserId=${UserId}`
     );
   }
+
+  GetUsersWithHisDocuments() {
+    return this.HttpClient.get(
+      `https://localhost:7175/api/Document/GetUserWithHisDocuments`
+    );
+  }
   CreateDocument(Document: any) {
     return this.HttpClient.post(
       'https://localhost:7175/api/Document/CreateDocument',
