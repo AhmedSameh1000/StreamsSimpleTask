@@ -18,6 +18,8 @@ namespace SimpleTask.BAL.DTOs
         public DateTime DueDate { get; set; }
         public string Priorty { get; set; }
 
+        public int DocumentFileCount { get; set; }
+
         public List<string> DocumentFiles { get; set; }
     } 
     public class SingleDocumentForReturnDTO

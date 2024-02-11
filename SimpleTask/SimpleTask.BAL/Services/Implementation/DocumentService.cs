@@ -101,7 +101,7 @@ namespace SimpleTask.BAL.Services.Implementation
             return Result;
         }
 
-        private List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel)
+        public List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel)
         {
             var DocumentPath = Path.Combine(_Host.WebRootPath, "Documents");
             var DocumentsFile = new List<DocumentFile>();
@@ -114,7 +114,8 @@ namespace SimpleTask.BAL.Services.Implementation
                 var Url = _FileServices.SaveFile(f, DocumentPath);
                 DocumentsFile.Add(new DocumentFile()
                 {
-                    File_Path = Url,
+                    File_Path = Url.Path,
+                    FileName = Url.Name
                 });
             });
 
@@ -138,13 +139,14 @@ namespace SimpleTask.BAL.Services.Implementation
                 Priorty = d.priority.Name,
                 UserEmail = d.applicationUser.Email,
                 UserName = d.applicationUser.Name,
-                DocumentFiles = d.documents.Select(c => Path.Combine(_Host.WebRootPath, "Documents", c.File_Path)).ToList()
+                DocumentFiles = d.documents.Select(c => Path.Combine(_Host.WebRootPath, "Documents", c.File_Path)).ToList(),
+                DocumentFileCount = d.documents.Count()
             }).ToList();
         }
 
         public async Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId)
         {
-            var Docment=await _DocumentRepository.GetFirstOrDefault(c=>c.Id==DocumentId);   
+            var Docment = await _DocumentRepository.GetFirstOrDefault(c => c.Id == DocumentId);
 
             if (Docment is null)
             {
@@ -152,10 +154,10 @@ namespace SimpleTask.BAL.Services.Implementation
             }
             return new SingleDocumentForReturnDTO()
             {
-                Id=Docment.Id,
-                DueDate=Docment.Due_Date,
-                Name    =Docment.Name,
-                PriortyId=Docment.PriorityId
+                Id = Docment.Id,
+                DueDate = Docment.Due_Date,
+                Name = Docment.Name,
+                PriortyId = Docment.PriorityId
             };
         }
     }

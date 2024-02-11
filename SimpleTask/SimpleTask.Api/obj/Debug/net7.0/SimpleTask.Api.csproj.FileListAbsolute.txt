@@ -19,7 +19,6 @@ C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\Sim
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\SimpleTask.Api.AssemblyInfoInputs.cache
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\SimpleTask.Api.AssemblyInfo.cs
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\SimpleTask.Api.csproj.CoreCompileInputs.cache
-C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\SimpleTask.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\SimpleTask.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Ahmed Sameh\Desktop\Task\SimpleTask\SimpleTask.Api\obj\Debug\net7.0\staticwebassets.development.json

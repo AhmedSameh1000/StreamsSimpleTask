@@ -46,6 +46,7 @@
       type="button"
       (click)="SaveDocument()"
       *ngIf="data == null"
+      [disabled]="DocumentForm.pristine"
     >
       Create Document
     </button>

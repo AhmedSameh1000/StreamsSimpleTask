@@ -7,5 +7,6 @@
         public int DocumentId { get; set; }
         public Document document { get; set; }
         public string? File_Path { get; set; }
+        public string FileName { get; set; }
     }
 }

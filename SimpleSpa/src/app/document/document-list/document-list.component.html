@@ -59,9 +59,19 @@
         <th mat-header-cell *matHeaderCellDef>dueDate</th>
         <td mat-cell *matCellDef="let element">{{ element.dueDate | date }}</td>
       </ng-container>
-      <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <ng-container matColumnDef="files">
+        <th mat-header-cell *matHeaderCellDef>files</th>
         <td mat-cell *matCellDef="let element">
+          {{
+            element.documentFileCount === 0
+              ? "Empty"
+              : element.documentFileCount + " Files"
+          }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="text-center">Actions</th>
+        <td mat-cell *matCellDef="let element" class="text-center">
           <button
             mat-icon-button
             color="warn"
@@ -69,7 +79,11 @@
           >
             <mat-icon>delete</mat-icon>
           </button>
-          <button mat-icon-button color="primary">
+          <button
+            mat-icon-button
+            color="primary"
+            (click)="OpenModelForDisplay(element.id)"
+          >
             <mat-icon>visibility</mat-icon>
           </button>
           <button

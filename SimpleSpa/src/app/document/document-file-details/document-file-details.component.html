@@ -1,0 +1,60 @@
+<mat-card class="p-2">
+  <mat-card-header> <h4>Your Document Documents</h4></mat-card-header>
+  <mat-card-content class="p-0">
+    <div
+      *ngIf="Files?.length == 0"
+      class="alert alert-warning alert-dismissible fade show"
+      role="alert"
+    >
+      Not submited any file yet
+    </div>
+
+    <table class="table table-dark table-hover" *ngIf="Files?.length != 0">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">file Name</th>
+          <th scope="col" class="text-center">Type</th>
+          <th scope="col" class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let file of Files">
+          <td class="text-center">{{ file.fileName.split(".")[0] }}</td>
+          <td class="text-center">{{ GetType(file.filePath) }}</td>
+          <td class="text-center d-flex justify-content-center gap-4">
+            <i
+              (click)="DeleteFile(file.id)"
+              class="fa-solid fa-trash-can fs-5 pointer"
+              style="color: #d56a0c"
+            ></i>
+            <a [href]="file.filePath" target="_blank">
+              <i
+                class="fa-solid fa-eye fs-5 pointer"
+                style="color: #b197fc"
+              ></i>
+            </a>
+            <i
+              (click)="downloadFile(file.id, file.fileName)"
+              class="fa-solid fa-circle-down fs-5 pointer"
+              style="color: #b197fc"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+  <mat-card-footer class="mt-2 d-flex justify-content-between">
+    <button class="btn btn-dark rounded-0" (click)="CloseDilog()">Close</button>
+    <label for="myinput" class="btn btn-primary pointer rounded-0"
+      >Insert new files</label
+    >
+
+    <input
+      type="file"
+      (change)="InsertNewFiles($event)"
+      multiple
+      id="myinput"
+      [hidden]="true"
+    />
+  </mat-card-footer>
+</mat-card>

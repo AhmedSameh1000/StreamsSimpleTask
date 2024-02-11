@@ -4,6 +4,7 @@ import { DocumentService } from './../../Services/Document/document.service';
 import { Component, OnInit, createComponent } from '@angular/core';
 import { CreateDocumentComponent } from '../create-document/create-document.component';
 import Swal from 'sweetalert2';
+import { DocumentFileDetailsComponent } from '../document-file-details/document-file-details.component';
 
 export interface PeriodicElement {
   name: string;
@@ -48,6 +49,7 @@ export class DocumentListComponent implements OnInit {
     'userName',
     'createdDate',
     'dueDate',
+    'files',
     'actions',
   ];
   OpenModel() {
@@ -82,6 +84,9 @@ export class DocumentListComponent implements OnInit {
               title: 'Deleted!',
               text: 'Your file has been deleted.',
               icon: 'success',
+              position: 'top-left',
+              width: '40%',
+              heightAuto: true,
             });
             this.LoadDocuments();
           },
@@ -96,6 +101,25 @@ export class DocumentListComponent implements OnInit {
       data: id,
     });
     dialogRef.afterClosed().subscribe({
+      next: (res) => {
+        if (res) {
+          this.LoadDocuments();
+        }
+      },
+    });
+  }
+
+  OpenModelForDisplay(id) {
+    console.log(id);
+    let AfterClose = this.MatDilog.open(DocumentFileDetailsComponent, {
+      minWidth: '30%',
+      data: {
+        id: id,
+        Name: this.AuthService.GetName(),
+        Email: this.AuthService.GetEmail(),
+      },
+    });
+    AfterClose.afterClosed().subscribe({
       next: (res) => {
         if (res) {
           this.LoadDocuments();

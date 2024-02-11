@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mU5s6r+mLDdT7ONeIzz2Y5VX/JmRwAUoNefQsnXVH24=",
+  "Hash": "eNsrEKwxmJXGiRNGOJRn+6ZJ3b+xM/ObNIK2jQW3vwk=",
   "Source": "SimpleTask.Api",
   "BasePath": "_content/SimpleTask.Api",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\d2a98734-b970-4dcc-ba30-44002ca44dad.pdf",
+      "Identity": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\Documents\\c983bac1-6035-4b0d-a5fb-3efb186b503d.pdf",
       "SourceId": "SimpleTask.Api",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ahmed Sameh\\Desktop\\Task\\SimpleTask\\SimpleTask.Api\\wwwroot\\",
       "BasePath": "_content/SimpleTask.Api",
-      "RelativePath": "Documents/d2a98734-b970-4dcc-ba30-44002ca44dad.pdf",
+      "RelativePath": "Documents/c983bac1-6035-4b0d-a5fb-3efb186b503d.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,7 +33,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Documents\\d2a98734-b970-4dcc-ba30-44002ca44dad.pdf"
+      "OriginalItemSpec": "wwwroot\\Documents\\c983bac1-6035-4b0d-a5fb-3efb186b503d.pdf"
     }
   ]
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using SimpleTask.BAL.DTOs;
 using SimpleTask.BAL.Services.Interfaces;
+using SimpleTask.DAL.Domains;
 
 namespace SimpleTask.BAL.Services.Implementation
 {
@@ -23,7 +25,7 @@ namespace SimpleTask.BAL.Services.Implementation
             }
         }
 
-        public string SaveFile(IFormFile file, string FolderPath)
+        public FileInformation SaveFile(IFormFile file, string FolderPath)
         {
             var FileUrl = "";
             string fileName = Guid.NewGuid().ToString();
@@ -35,7 +37,11 @@ namespace SimpleTask.BAL.Services.Implementation
             }
 
             FileUrl = fileName + extension;
-            return FileUrl;
+            return new FileInformation()
+            {
+                Path = FileUrl,
+                Name = file.FileName
+            };
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using SimpleTask.BAL.DTOs;
 using SimpleTask.BAL.Services.Interfaces;
+using SimpleTask.DAL.Domains;
 using SimpleTask.DAL.Repositories.RepositoryInterfaces;
 
 namespace SimpleTask.BAL.Services.Implementation
@@ -9,13 +11,23 @@ namespace SimpleTask.BAL.Services.Implementation
     {
         private readonly IDocumentFileRepository _DocumentFileRepository;
         private readonly IFileServices _FileServices;
+        private readonly IWebHostEnvironment _Host;
+        private readonly IHttpContextAccessor _HttpContextAccessor;
+        private readonly IDocumentRepository _DocumentRepository;
 
         public DocumentFileService(
             IDocumentFileRepository documentFileRepository,
-            IFileServices fileServices)
+            IFileServices fileServices,
+            IWebHostEnvironment Host,
+            IHttpContextAccessor httpContextAccessor,
+           IDocumentRepository documentRepository
+           )
         {
             _DocumentFileRepository = documentFileRepository;
             _FileServices = fileServices;
+            _Host = Host;
+            _HttpContextAccessor = httpContextAccessor;
+            _DocumentRepository = documentRepository;
         }
 
         public async Task<bool> DeleteDocumentFile(int DocumentFileId)
@@ -33,6 +45,65 @@ namespace SimpleTask.BAL.Services.Implementation
                 _FileServices.DeleteFile("Documents", DocumentFilepath);
             }
             return Result;
+        }
+
+        public async Task<string> GetFilePath(int fileId)
+        {
+            var File = await _DocumentFileRepository.GetFirstOrDefault(c => c.Id == fileId);
+
+            if (File is null)
+            {
+                return null;
+            }
+
+            var filePath = Path.Combine(_Host.WebRootPath, "Documents", File.File_Path);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return null;
+            }
+
+            return filePath;
+        }
+
+        public async Task<List<DocumentFileToReturn>> GetFilesByDocumentId(int DocumentId)
+        {
+            var DocuemntsFile = await _DocumentFileRepository.GetAllAsNoTracking(c => c.DocumentId == DocumentId);
+
+            if (DocuemntsFile is null)
+                return null;
+
+            var Result = DocuemntsFile.Select(c => new DocumentFileToReturn()
+            {
+                id = c.Id,
+                filePath = Path.Combine(@$"{_HttpContextAccessor.HttpContext.Request.Scheme}://{_HttpContextAccessor.HttpContext.Request.Host}", "Documents", c.File_Path),
+                FileName = c.FileName
+            }).ToList();
+            return Result;
+        }
+
+        public async Task<bool> InsertFilesIntoDocument(FileForCreateDTO fileModel)
+        {
+            var Document = await _DocumentRepository.GetFirstOrDefault(c => c.Id == fileModel.DocumentId, new[] { "documents" });
+
+            if (Document is null)
+            {
+                return false;
+            }
+
+            fileModel.files.ForEach(file =>
+            {
+                var fileInformation = _FileServices.SaveFile(file, Path.Combine(_Host.WebRootPath, "Documents"));
+                var DocumentFile = new DocumentFile()
+                {
+                    File_Path = fileInformation.Path,
+                    FileName = fileInformation.Name
+                };
+                Document.documents.Add(DocumentFile);
+            });
+
+            _DocumentRepository.Update(Document);
+            return await _DocumentRepository.SaveChanges();
         }
     }
 }

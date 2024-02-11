@@ -1,4 +1,6 @@
 ﻿using SimpleTask.BAL.DTOs;
+using SimpleTask.DAL.Domains;
+
 namespace SimpleTask.BAL.Services.Interfaces
 {
     public interface IDocumentService
@@ -10,10 +12,9 @@ namespace SimpleTask.BAL.Services.Interfaces
         Task<bool> DeleteDocument(int DocumentId, string UserId);
 
         Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId);
+
+        List<DocumentFile> SaveModelFiles(DocumentForCreateDTo documentModel);
+
         Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId);
     }
-
-
-
-
 }

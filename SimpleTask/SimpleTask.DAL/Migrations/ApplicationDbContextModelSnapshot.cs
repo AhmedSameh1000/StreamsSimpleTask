@@ -269,6 +269,10 @@ namespace SimpleTask.DAL.Migrations
                     b.Property<int>("DocumentId")
                         .HasColumnType("int");
 
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("File_Path")
                         .HasColumnType("nvarchar(max)");
 
@@ -350,7 +354,7 @@ namespace SimpleTask.DAL.Migrations
             modelBuilder.Entity("SimpleTask.DAL.Domains.Document", b =>
                 {
                     b.HasOne("SimpleTask.DAL.Domains.Priority", "priority")
-                        .WithMany("documents")
+                        .WithMany()
                         .HasForeignKey("PriorityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -383,11 +387,6 @@ namespace SimpleTask.DAL.Migrations
                 });
 
             modelBuilder.Entity("SimpleTask.DAL.Domains.Document", b =>
-                {
-                    b.Navigation("documents");
-                });
-
-            modelBuilder.Entity("SimpleTask.DAL.Domains.Priority", b =>
                 {
                     b.Navigation("documents");
                 });
