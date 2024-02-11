@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using SimpleEcommerce.Infrastructure.RepositoryImplementation;
+using SimpleTask.Api.ErrorsHandling;
 using SimpleTask.BAL.Helpers;
 using SimpleTask.BAL.Services.Implementation;
 using SimpleTask.BAL.Services.Interfaces;
@@ -76,6 +77,7 @@ builder.Services.AddScoped<IPriorityServices, PriorityServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 var app = builder.Build();
 app.UseStaticFiles();
+app.UseMiddleware<ErrorhandlingMiddleWare>();
 using (var Scope = app.Services.CreateScope())
 {
     var priorityRepository = Scope.ServiceProvider.GetRequiredService<IPriorityRepository>();

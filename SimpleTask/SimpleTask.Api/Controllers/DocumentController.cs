@@ -73,12 +73,12 @@ namespace SimpleTask.Api.Controllers
 
             return Ok(Document);
         }
-        [Authorize(Roles ="Admin")]
+
+        [Authorize(Roles = "Admin")]
         [HttpGet("GetUserWithHisDocuments")]
         public async Task<IActionResult> GetUserWithHisDocuments()
         {
             var Document = await _DocumentService.GetUsersWithDocuments();
-
             if (Document == null)
                 return BadRequest();
 
