@@ -95,5 +95,12 @@ export class DocumentListComponent implements OnInit {
       minWidth: '50%',
       data: id,
     });
+    dialogRef.afterClosed().subscribe({
+      next: (res) => {
+        if (res) {
+          this.LoadDocuments();
+        }
+      },
+    });
   }
 }

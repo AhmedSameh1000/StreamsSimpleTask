@@ -22,6 +22,9 @@ export class CreateDocumentComponent implements OnInit {
   ngOnInit(): void {
     this.LoadPriorties();
     this.InitializeForm();
+    if (this.data != null) {
+      this.LoadSingleDocument();
+    }
     console.log(this.data);
   }
   DocumentForm: FormGroup;
@@ -43,6 +46,20 @@ export class CreateDocumentComponent implements OnInit {
       },
       error: (err) => {
         console.log(err);
+      },
+    });
+  }
+
+  LoadSingleDocument() {
+    this.DocumentService.GetSingleDocument(this.data).subscribe({
+      next: (res: any) => {
+        console.log(res);
+        this.DocumentForm.patchValue({
+          Name: res.name,
+          UserId: this.AuthService.GetUserId(),
+          Due_date: res.dueDate,
+          priorityId: res.priortyId,
+        });
       },
     });
   }
@@ -96,5 +113,15 @@ export class CreateDocumentComponent implements OnInit {
     for (let i = 0; i < files.length; i++) {
       filesFormArray.push(new FormControl(files[i]));
     }
+  }
+  UpdateDocument() {
+    this.DocumentService.UpdateDocument(
+      this.GetFormData(),
+      this.data
+    ).subscribe({
+      next: (res) => {
+        this.MatDialogref.close(true);
+      },
+    });
   }
 }

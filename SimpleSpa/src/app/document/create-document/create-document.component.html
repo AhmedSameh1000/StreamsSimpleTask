@@ -35,9 +35,19 @@
       mat-raised-button
       color="accent"
       type="button"
-      (click)="SaveDocument()"
+      *ngIf="data"
+      (click)="UpdateDocument()"
     >
-      Save Document
+      Update Document
+    </button>
+    <button
+      mat-raised-button
+      color="accent"
+      type="button"
+      (click)="SaveDocument()"
+      *ngIf="data == null"
+    >
+      Create Document
     </button>
     <button mat-dialog-close mat-raised-button color="primary">Cancel</button>
   </div>

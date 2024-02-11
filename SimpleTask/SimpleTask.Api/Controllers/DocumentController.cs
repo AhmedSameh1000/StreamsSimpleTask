@@ -60,5 +60,15 @@ namespace SimpleTask.Api.Controllers
                 return BadRequest();
             return Ok(Docuemnts);
         }
+        [HttpGet("GetSingleDocument")]
+        public async Task<IActionResult> GetGetSingleDocument(int documentId)
+        {
+            var Document=await _DocumentService.GetDocumentById(documentId);
+
+            if(Document == null)
+                return BadRequest();
+
+            return Ok(Document);
+        }
     }
 }

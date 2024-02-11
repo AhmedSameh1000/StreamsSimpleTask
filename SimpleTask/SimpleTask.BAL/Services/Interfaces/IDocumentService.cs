@@ -10,7 +10,9 @@ namespace SimpleTask.BAL.Services.Interfaces
         Task<bool> DeleteDocument(int DocumentId, string UserId);
 
         Task<List<DocumentForReturnDTO>> GetUserDocuments(string UserId);
+        Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId);
     }
+
 
 
 

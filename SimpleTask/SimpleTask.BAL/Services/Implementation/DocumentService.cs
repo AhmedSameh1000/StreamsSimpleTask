@@ -141,5 +141,22 @@ namespace SimpleTask.BAL.Services.Implementation
                 DocumentFiles = d.documents.Select(c => Path.Combine(_Host.WebRootPath, "Documents", c.File_Path)).ToList()
             }).ToList();
         }
+
+        public async Task<SingleDocumentForReturnDTO> GetDocumentById(int DocumentId)
+        {
+            var Docment=await _DocumentRepository.GetFirstOrDefault(c=>c.Id==DocumentId);   
+
+            if (Docment is null)
+            {
+                return null;
+            }
+            return new SingleDocumentForReturnDTO()
+            {
+                Id=Docment.Id,
+                DueDate=Docment.Due_Date,
+                Name    =Docment.Name,
+                PriortyId=Docment.PriorityId
+            };
+        }
     }
 }
